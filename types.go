@@ -55,6 +55,9 @@ type SyncingStatus struct {
 	HeadSlot common.Slot `json:"head_slot"`
 	// How many slots node needs to process to reach head. 0 if synced.
 	SyncDistance common.Slot `json:"sync_distance"`
+	IsSyncing    bool        `json:"is_syncing"`
+	IsOptimistic bool        `json:"is_optimistic"`
+	ELOffline    bool        `json:"el_offline"`
 }
 
 // Wrapper around the original ProposerDuty response
